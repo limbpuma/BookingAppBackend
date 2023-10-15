@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 //localhost:8081/restaurant-app
 @RequestMapping("restaurant-app")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "web-production-f34d5.up.railway.app")
 
 public class BookingController {
 
