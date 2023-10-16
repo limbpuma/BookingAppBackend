@@ -1,0 +1,12 @@
+{
+  "name": "Spring Boot",
+  "description": "Despliegue de una aplicación Spring Boot",
+  "keywords": ["java", "spring", "boot"],
+  "addons": ["mysql"],
+  "variables": [
+    {
+      "key": "MYENV",
+      "description": "dev booking project"
+    }
+  ]
+}
