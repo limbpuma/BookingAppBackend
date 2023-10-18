@@ -1,5 +1,6 @@
 package restaurant.booking.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.List;
 //localhost:8081/restaurant-app
 @RequestMapping("restaurant-app")
 @CrossOrigin(origins = "https://booking-app.up.railway.app")
-
+@Slf4j
 
 public class BookingController {
 
@@ -29,6 +30,7 @@ public class BookingController {
     @GetMapping("/booking")
     public List<Booking> getBooking(){
         List<Booking> bookings = this.bookingService.listBooking();
+        log.info("getting booking");
         logger.info("reservations obtained");
         bookings.forEach((booking -> logger.info(booking.toString())));
         return bookings;
